@@ -1,10 +1,10 @@
 import java.util.HashMap;
-import java.util.Scanner;
 
 public class ConvertToText {
 
+    private final HashMap<String, Character> converter = new HashMap<>();
+
     public ConvertToText() {
-        HashMap<String, Character> converter = new HashMap<>();
         converter.put(".-", 'a');
         converter.put("-...", 'b');
         converter.put("-.-.", 'c');
@@ -42,14 +42,15 @@ public class ConvertToText {
         converter.put("---..", '8');
         converter.put("----.", '9');
         converter.put(" ", ' ');
-        {
+    }
 
-            Scanner scn = new Scanner(System.in);
-            String input = scn.nextLine();
-                System.out.print(converter.get(input));
-
-            }
-        System.exit(0);
+    public String getConverter(String ord) {
+        StringBuilder resultat = new StringBuilder();
+        String[] result = ord.split("\s");
+        for (String value : result) {
+            resultat.append(converter.get(value));
+        }
+        return resultat.toString();
     }
 }
 

@@ -50,7 +50,7 @@ public class ConvertToMorse {
                 System.out.print(converter.get(input.charAt(i)));
                 i++;
 
-            }System.exit(0);
-        }
+            }
+        }System.exit(0);
     }
 }
