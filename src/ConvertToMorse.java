@@ -2,8 +2,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class ConvertToMorse {
-
-    HashMap<Character, String> converter = new HashMap<>();
+        HashMap<Character, String> converter = new HashMap<>();
 
     public ConvertToMorse() {
         converter.put('a', ".-  ");
@@ -32,7 +31,6 @@ public class ConvertToMorse {
         converter.put('x', "-..-  ");
         converter.put('y', "-.--  ");
         converter.put('z', "--..  ");
-        converter.put('0', "-----  ");
         converter.put('1', ".----  ");
         converter.put('2', "..---  ");
         converter.put('3', "...--  ");
@@ -42,7 +40,12 @@ public class ConvertToMorse {
         converter.put('7', "--...  ");
         converter.put('8', "---..  ");
         converter.put('9', "----.  ");
-        converter.put(' ', "   ");
+        converter.put('0', "-----  ");
+        converter.put('.', ".-.-.-  ");
+        converter.put(',', "--..--  ");
+        converter.put('?', "..--..  ");
+        converter.put(' ', " ");
+
         {
             Scanner scn = new Scanner(System.in);
             String input = scn.nextLine().toLowerCase();

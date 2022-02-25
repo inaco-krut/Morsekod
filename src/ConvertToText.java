@@ -31,7 +31,6 @@ public class ConvertToText {
         converter.put("-..-", 'x');
         converter.put("-.--", 'y');
         converter.put("--..", 'z');
-        converter.put("-----", '0');
         converter.put(".----", '1');
         converter.put("..---", '2');
         converter.put("...--", '3');
@@ -41,10 +40,13 @@ public class ConvertToText {
         converter.put("--...", '7');
         converter.put("---..", '8');
         converter.put("----.", '9');
-        converter.put(" ", ' ');
+        converter.put("-----", '0');
+        converter.put(".-.-.-", '.');
+        converter.put("--..--", ',');
+        converter.put("..--..", '?');
 
     }
-    public String getConverter(String ord) {
+    public String getConverterToText(String ord) {
         StringBuilder resultat = new StringBuilder();
         String[] result = ord.split("\\s");
         for (String value : result) {
