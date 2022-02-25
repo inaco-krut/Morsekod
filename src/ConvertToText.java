@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Objects;
 
 public class ConvertToText {
 
@@ -55,4 +56,3 @@ public class ConvertToText {
         return resultat.toString();
     }
 }
-
