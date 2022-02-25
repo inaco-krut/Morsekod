@@ -14,7 +14,12 @@ public class MainKlass {
                 case "2":
                     System.out.println("Write the morse code that you would like to convert to English");
                     ConvertToText morseTillText = new ConvertToText();
-                    System.out.println(morseTillText.getConverter(scn.nextLine()));
+                    if (morseTillText.getConverter(scn.nextLine()).equals("null")) {
+                        System.out.println("gör om, lägg till mellanrum i morsekoden");
+                        System.out.println(morseTillText.getConverter(scn.nextLine()));
+                    }else {
+                        System.out.println(morseTillText.getConverter(scn.nextLine()));
+                    }
                     break;
                 default:
                     System.err.println("error, try again");

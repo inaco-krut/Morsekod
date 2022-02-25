@@ -42,11 +42,11 @@ public class ConvertToText {
         converter.put("---..", '8');
         converter.put("----.", '9');
         converter.put(" ", ' ');
-    }
 
+    }
     public String getConverter(String ord) {
         StringBuilder resultat = new StringBuilder();
-        String[] result = ord.split("\s");
+        String[] result = ord.split("\\s");
         for (String value : result) {
             resultat.append(converter.get(value));
         }

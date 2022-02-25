@@ -3,8 +3,9 @@ import java.util.Scanner;
 
 public class ConvertToMorse {
 
+    HashMap<Character, String> converter = new HashMap<>();
+
     public ConvertToMorse() {
-        HashMap<Character, String> converter = new HashMap<>();
         converter.put('a', ".-  ");
         converter.put('b', "-...  ");
         converter.put('c', "-.-.  ");
